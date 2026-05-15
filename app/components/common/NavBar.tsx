@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
@@ -8,8 +11,20 @@ const NAV_ITEMS = [
 ];
 
 export function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="kimochi-nav">
+    <nav className={`kimochi-nav ${isScrolled ? "scrolled" : ""}`}>
       <Link href="/" className="kimochi-logo">
         Hamamatsu
       </Link>
