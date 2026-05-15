@@ -8,16 +8,16 @@ export const homeContent: Copy = {
   },
   hero: {
     badge: "India × Japan collaboration for IB schools",
-    title: "Kimochi helps students connect, create, and grow across cultures.",
+    title: "Hamamatsu helps students connect, create, and grow across cultures.",
     subtitle:
       "A school-first program designed for IB communities in India and Japan—where empathy, creativity, and global perspective come together.",
     primaryCta: "Talk with us",
     secondaryCta: "Explore program",
   },
   about: {
-    sectionLabel: "About Kimochi",
-    heading: "Why Kimochi",
-    body: "Kimochi is a cross-cultural learning initiative that brings together students and educators from India and Japan. We co-design meaningful collaboration experiences aligned with IB values: international mindedness, inquiry, reflection, and action.",
+    sectionLabel: "About Hamamatsu",
+    heading: "Why Hamamatsu",
+    body: "Hamamatsu is a cross-cultural learning initiative that brings together students and educators from India and Japan. We co-design meaningful collaboration experiences aligned with IB values: international mindedness, inquiry, reflection, and action.",
     highlights: [
       "Built for IB schools and global learners",
       "English-first program delivery",
@@ -26,7 +26,7 @@ export const homeContent: Copy = {
   },
   program: {
     heading: "Program",
-    body: "Kimochi will offer multiple cross-cultural programs over time. Our first launch is IBL (Inquiry Based Learning), a 5-month India-Japan student collaboration journey.",
+    body: "Hamamatsu will offer multiple cross-cultural programs over time. Our first launch is IBL (Inquiry Based Learning), a 5-month India-Japan student collaboration journey.",
     featuredLabel: "Launching Program",
     featuredName: "IBL — Inquiry Based Learning",
     featuredDuration: "Duration: 5 months",
@@ -104,8 +104,8 @@ export const homeContent: Copy = {
   },
   contact: {
     heading: "Let’s build this with your school",
-    body: "We’re currently connecting with IB schools interested in launching Kimochi’s first IBL cohort. Reach out to discuss fit, timeline, and implementation support.",
-    cta: "Contact Kimochi",
+    body: "We’re currently connecting with IB schools interested in launching Hamamatsu’s first IBL cohort. Reach out to discuss fit, timeline, and implementation support.",
+    cta: "Contact Hamamatsu",
   },
-  footer: "© Kimochi. Built for cross-cultural student learning.",
+  footer: "© Hamamatsu. Built for cross-cultural student learning.",
 };

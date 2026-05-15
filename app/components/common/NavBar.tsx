@@ -1,22 +1,28 @@
-import type { Copy } from "./home.types";
+import Link from "next/link";
 
-type NavBarProps = {
-  nav: Copy["nav"];
-};
+const NAV_ITEMS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/partners", label: "Our Partners" },
+  { href: "/alumni", label: "Alumni" },
+];
 
-export function NavBar({ nav }: NavBarProps) {
+export function NavBar() {
   return (
     <nav className="kimochi-nav">
-      <a href="#top" className="kimochi-logo">
-        Kimochi
-      </a>
+      <Link href="/" className="kimochi-logo">
+        Hamamatsu
+      </Link>
 
       <div className="kimochi-links">
-        <a href="#about">{nav.about}</a>
-        <a href="#program">{nav.program}</a>
-        <a href="#contact" className="kimochi-nav-cta">
-          {nav.talk}
-        </a>
+        {NAV_ITEMS.map((item) => (
+          <Link key={item.href} href={item.href}>
+            {item.label}
+          </Link>
+        ))}
+        <Link href="/contact" className="kimochi-nav-cta">
+          Contact Us
+        </Link>
       </div>
     </nav>
   );

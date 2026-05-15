@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f9fc;
+  --bg: #ffffff;
   --bg-soft: #eef3fb;
   --text: #0b1220;
   --text-muted: #3e4a63;
@@ -39,12 +39,29 @@ body {
   color: var(--text);
   font-family: Inter, Arial, sans-serif;
   line-height: 1.65;
-  background:
-    radial-gradient(circle at 10% 15%, rgb(255 143 31 / 0.14), transparent 32%),
-    radial-gradient(circle at 90% 18%, rgb(255 95 143 / 0.15), transparent 34%),
-    radial-gradient(circle at 75% 82%, rgb(30 64 175 / 0.13), transparent 35%),
-    linear-gradient(160deg, #fbfdff 0%, #f5f8ff 42%, #f8fbff 100%);
-  background-attachment: fixed;
+  background: #ffffff;
+}
+
+.section-card,
+.program-card,
+.journey-panel,
+.impact-box,
+.hero,
+.kimochi-nav,
+.contact-section,
+.journey-tab {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+}
+
+.hero::before,
+.hero::after,
+.program-card::after,
+.contact-section::after {
+  content: none !important;
 }
 
 a {
@@ -52,7 +69,7 @@ a {
   text-decoration: none;
 }
 
-.kimochi-page {
+.page {
   min-height: 100vh;
   max-width: 1160px;
   margin: 0 auto;
@@ -61,18 +78,15 @@ a {
 
 .kimochi-nav {
   position: sticky;
-  top: 1rem;
+  top: 0;
   z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  backdrop-filter: blur(18px);
-  background: rgb(255 255 255 / 0.68);
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgb(15 23 42 / 0.08);
+  padding: 0.85rem 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .kimochi-logo {
@@ -763,11 +777,76 @@ a {
   background: radial-gradient(circle, rgb(255 143 31 / 0.32), transparent 62%);
 }
 
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  color: #475569;
-  font-size: 0.96rem;
+.site-footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.site-footer-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 2.2rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+}
+
+.site-footer-intro p {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(0.94rem, 1.35vw, 1.1rem);
+  line-height: 1.4;
+  font-weight: 550;
+  max-width: 28ch;
+}
+
+.site-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.2rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+.site-footer-intro a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.site-footer-column {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.site-footer-column h4 {
+  margin: 0 0 0.25rem;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.site-footer-column a {
+  color: #4b5563;
+  font-size: 1.02rem;
+}
+
+.site-footer-column a:hover {
+  color: #111827;
 }
 
 @media (max-width: 900px) {
@@ -791,7 +870,7 @@ footer {
 }
 
 @media (max-width: 760px) {
-  .kimochi-page {
+  .page {
     padding-inline: 0.9rem;
   }
 
@@ -810,5 +889,14 @@ footer {
 
   .hero {
     border-radius: 1.3rem;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .site-footer-columns {
+    grid-template-columns: 1fr 1fr;
   }
 }
