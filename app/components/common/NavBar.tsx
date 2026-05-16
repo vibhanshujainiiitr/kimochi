@@ -12,6 +12,7 @@ const NAV_ITEMS = [
 
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,19 +24,49 @@ export function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const closeMenu = () => {
+      setIsMenuOpen(false);
+    };
+
+    window.addEventListener("resize", closeMenu);
+    return () => window.removeEventListener("resize", closeMenu);
+  }, [isMenuOpen]);
+
+  const handleNavLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className={`kimochi-nav ${isScrolled ? "scrolled" : ""}`}>
       <Link href="/" className="kimochi-logo">
         Hamamatsu
       </Link>
 
-      <div className="kimochi-links">
+      <button
+        type="button"
+        className={`kimochi-menu-toggle ${isMenuOpen ? "open" : ""}`}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen}
+        aria-controls="kimochi-mobile-nav"
+        onClick={() => setIsMenuOpen((current) => !current)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <div id="kimochi-mobile-nav" className={`kimochi-links ${isMenuOpen ? "open" : ""}`}>
         {NAV_ITEMS.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link key={item.href} href={item.href} onClick={handleNavLinkClick}>
             {item.label}
           </Link>
         ))}
-        <Link href="/contact" className="kimochi-nav-cta">
+        <Link href="/contact" className="kimochi-nav-cta" onClick={handleNavLinkClick}>
           Contact Us
         </Link>
       </div>

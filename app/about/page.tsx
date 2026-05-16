@@ -1,42 +1,96 @@
+import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Kimochi",
+  description:
+    "Learn about Kimochi, a project under Suzuki Motor Corporation focused on student career exploration through inquiry-based learning.",
+};
+
 const teamMembers = [
   {
-    name: "Aiko Tanaka",
-    role: "Program Director",
-    bio: "Leads cross-cultural curriculum design and school partnerships across India and Japan.",
+    name: "Shunsuke Aoki",
+    org: "Suzuki Motors Japan",
+    role: "Project leader",
+    image: "/images/team/aoki.png",
+    alt: "Shunsuke Aoki",
   },
   {
-    name: "Rohan Mehta",
-    role: "Learning Experience Lead",
-    bio: "Designs inquiry-based student journeys focused on collaboration, empathy, and innovation.",
+    name: "Vibhanshu Jain",
+    org: "Suzuki Motors Japan",
+    role: "Application Developer",
+    image: "/images/team/vibhanshu.png",
+    alt: "Vibhanshu Jain",
   },
   {
-    name: "Maya Sato",
-    role: "School Success Manager",
-    bio: "Supports teachers and school leaders with onboarding, implementation, and outcomes tracking.",
+    name: "Virendra Soni",
+    org: "Application Developer",
+    role: "Team Member",
+    image: "/images/team/viren.png",
+    alt: "Virendra Soni",
   },
-];
+] as const;
 
 export default function AboutPage() {
   return (
-    <main className="page">
-      <section className="section-card" id="top">
-        <p className="section-label">About Us</p>
-        <h1>Our mission and team</h1>
-        <p className="section-intro">
-          Hamamatsu helps students develop global perspective through meaningful, project-based collaboration.
-        </p>
+    <main className="page page-folds about-page">
+      <section className="fold about-fold about-fold-hero">
+        <div className="about-hero">
+          <p className="about-kicker">About Kimochi</p>
+          <h1>
+            A project under <span>Suzuki Motor Corporation</span>
+          </h1>
+          <p className="about-lead">
+            Kimochi expands student career possibilities through career consultation and
+            inquiry-based learning, built through India–Japan collaboration.
+          </p>
+        </div>
       </section>
 
-      <section className="section-card about-card">
-        <h2>Our Team</h2>
-        <div className="program-grid">
-          {teamMembers.map((member) => (
-            <article key={member.name} className="program-card">
-              <h3>{member.name}</h3>
-              <p className="featured-label">{member.role}</p>
-              <p>{member.bio}</p>
-            </article>
-          ))}
+      <section className="fold about-fold about-fold-team" aria-labelledby="about-team-heading">
+        <div className="about-team">
+          <div className="about-team-head">
+            <h2 id="about-team-heading">Our Project Team</h2>
+            <p>
+              A cross-functional team spanning leadership, research, finance, marketing, and
+              product development.
+            </p>
+          </div>
+
+          <figure className="team-image-wrap">
+            <Image
+              src="/images/team.png"
+              alt="Kimochi project team members"
+              width={2206}
+              height={1004}
+              className="team-image"
+              priority
+            />
+          </figure>
+
+          <div className="about-team-grid" role="list" aria-label="Project team members">
+            {teamMembers.map((member) => (
+              <article key={member.name} className="team-card" role="listitem">
+                <div className="team-card-top">
+                  <div className="team-avatar">
+                    <Image
+                      src={member.image}
+                      alt={member.alt}
+                      width={96}
+                      height={96}
+                      className="team-avatar-image"
+                    />
+                  </div>
+                  <div className="team-title-wrap">
+                    <h3 className="team-name">{member.name}</h3>
+                  </div>
+                </div>
+                <p className="team-meta">
+                  {member.org}, {member.role}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </main>
