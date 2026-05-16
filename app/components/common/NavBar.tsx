@@ -44,7 +44,8 @@ export function NavBar() {
   return (
     <nav className={`kimochi-nav ${isScrolled ? "scrolled" : ""}`}>
       <Link href="/" className="kimochi-logo">
-        Hamamatsu
+        <img src="/logo.png" alt="Kimochi logo" width={24} height={24} className="kimochi-logo-image" />
+        Kimochi
       </Link>
 
       <button

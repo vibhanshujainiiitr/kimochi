@@ -12,7 +12,7 @@ export default function PrivacyPage() {
 
       <section className="section-card">
         <p>
-          Hamamatsu provides this website for informational purposes. We do not maintain user accounts, and we do
+          Kimochi provides this website for informational purposes. We do not maintain user accounts, and we do
           not store personal information submitted through this site.
         </p>
         <p>

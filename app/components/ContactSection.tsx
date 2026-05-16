@@ -9,7 +9,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
     <section id="contact" className="section-card contact-card">
       <h2>{contact.heading}</h2>
       <p>{contact.body}</p>
-      <a className="btn-primary" href="mailto:hello@hamamatsu.school">
+      <a className="btn-primary" href="mailto:hello@kimochi.school">
         {contact.cta}
       </a>
     </section>

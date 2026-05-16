@@ -2,7 +2,7 @@ const partners = [
   {
     name: "Global IB Academy Network",
     type: "School Network",
-    summary: "Collaborates on pilot cohorts and co-designs learning outcomes with Hamamatsu.",
+    summary: "Collaborates on pilot cohorts and co-designs learning outcomes with Kimochi.",
   },
   {
     name: "Tokyo Student Innovation Lab",

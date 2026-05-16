@@ -9,9 +9,9 @@ export function SiteFooter() {
             <span className="site-footer-logo" aria-hidden="true">
               H
             </span>{" "}
-            Hamamatsu supports cross-cultural student learning with inquiry-led collaboration between schools in
+            Kimochi supports cross-cultural student learning with inquiry-led collaboration between schools in
             India and Japan.
-            </p>
+          </p>
         </div>
 
         <div className="site-footer-columns">
@@ -32,7 +32,7 @@ export function SiteFooter() {
             <h4>Legal</h4>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
-            <a href="mailto:hello@hamamatsu.school">hello@hamamatsu.school</a>
+            <a href="mailto:hello@kimochi.school">hello@kimochi.school</a>
           </div>
         </div>
       </div>

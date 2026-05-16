@@ -21,7 +21,7 @@ export default function AlumniPage() {
     <main className="page">
       <section className="section-card" id="top">
         <p className="section-label">Alumni</p>
-        <h1>Student journeys after Hamamatsu</h1>
+        <h1>Student journeys after Kimochi</h1>
         <p className="section-intro">
           Alumni continue to apply empathy, inquiry, and innovation in classrooms and communities.
         </p>

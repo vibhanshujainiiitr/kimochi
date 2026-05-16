@@ -12,11 +12,11 @@ export default function TermsPage() {
 
       <section className="section-card">
         <p>
-          The content on this website is provided for general information about Hamamatsu programs and partnerships.
+          The content on this website is provided for general information about Kimochi programs and partnerships.
         </p>
         <p>
           By using this site, you agree to use it lawfully and respectfully. For questions, contact
-          hello@hamamatsu.school.
+          hello@kimochi.school.
         </p>
       </section>
     </main>

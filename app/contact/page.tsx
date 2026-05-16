@@ -7,11 +7,11 @@ export default function ContactPage() {
         <p className="section-label">Contact Us</p>
         <h1>Let’s build this with your school</h1>
         <p>
-          We’re connecting with IB schools interested in launching Hamamatsu cohorts. Reach out to discuss
+          We’re connecting with IB schools interested in launching Kimochi cohorts. Reach out to discuss
           fit, timeline, and implementation support.
         </p>
-        <a className="btn-primary" href="mailto:hello@hamamatsu.school">
-          Email hello@hamamatsu.school
+        <a className="btn-primary" href="mailto:hello@kimochi.school">
+          Email hello@kimochi.school
         </a>
         <Link className="btn-secondary" href="/">
           Back to Home
